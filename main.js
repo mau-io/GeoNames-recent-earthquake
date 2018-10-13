@@ -41,8 +41,9 @@ $(document).ready(function() {
 
     $.ajax({ 
       type: 'GET', 
-      url: 'http://api.geonames.org/searchJSON?', 
+      url: 'https://secure.geonames.org/searchJSON?', 
       data: data, 
+      
       dataType: 'json',
       success: function (data) { 
         log(data);
@@ -59,7 +60,7 @@ $(document).ready(function() {
     log(boundingBox)
     $.ajax({ 
       type: 'GET', 
-      url: 'http://api.geonames.org/earthquakesJSON?', 
+      url: 'https://secure.geonames.org/earthquakesJSON?', 
       data: { 
         username: 'yoTest',
         north:  boundingBox.north,
@@ -179,7 +180,7 @@ $(document).ready(function() {
     var yyyy    = today.getFullYear();
     var today   = yyyy + '-' + mm + '-' + dd;
    
-    $.getJSON("http://api.geonames.org/earthquakesJSON?north=90&south=-90&east=180&west=-180&date=" + today + "&minMagnitude=4.5&maxRows=500&username=yoTest", function(res){
+    $.getJSON("https://secure.geonames.org/earthquakesJSON?north=90&south=-90&east=180&west=-180&date=" + today + "&minMagnitude=4.5&maxRows=500&username=yoTest", function(res){
       sortQuakes(res.earthquakes);
     });
 
