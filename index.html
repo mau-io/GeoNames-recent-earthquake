@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <title>GeoNames Recent Earthquake WebService</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="py-3 text-center">
+      <h2>GeoNames Recent Earthquake</h2>
+    </div>
+
+    <div class="main">
+  
+      <!-- Actual search box -->
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <form class="search">
+          <input type="text" class="form-control" name="city" value="" placeholder="Search">
+        </form>
+      </div>
+      
+    </div>
+    <div id="map"></div>  
+  </div>
+
+ 
+
+  <div class="panel">
+    <div class="">
+      <h4 class="second-title"> Top 10 Earthquakes around the world:</h4>
+      <ul class="list-group mb-3" id="top-10"></ul>
+    </div>
+  </div>
+
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2018-2018 Mauricio Tamez</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="https://github.com/mau-io">Github</a></li>
+    </ul>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAEilyq-ewCTEQwll8tBxzzAkLPOV1uFM"></script>
+ 
+  <script src="main.js"></script>
+</body>
+</html>
