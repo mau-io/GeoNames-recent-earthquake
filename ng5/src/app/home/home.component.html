@@ -1,0 +1,16 @@
+<div class="container color-dark" [@goals]="textArray.length">
+  <p>Add {{itemCount}}</p>
+
+  <form>
+    <input type="text" class="txt" name="item" placeholder="text" [(ngModel)]="text">
+    <!-- <br> <p>{{text}}</p> -->
+
+    <input type="button" class="btn" [value]="btnAdd" (click)="addItem()">
+
+  </form>
+
+  <ul *ngFor="let txt of textArray; let i = index" (click)="removeItem(i)">
+    <li>{{txt}}</li>
+  </ul>
+
+</div>
